@@ -1,0 +1,70 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+}
+.clock{
+    width:300px;
+    height: 300px;
+    border-radius: 150px;
+    border: 5px solid rgb(252, 255 ,55);
+    position: relative;
+}
+#second-hand{
+    position: absolute;
+    /* make a stick of 2px width */
+    height: 130px;
+    width: 2px;
+    background-color: rgb(70,255,255);
+    /* move to center of clock = means half of circle distance= 300/2=150px -1px border both side= 149px */
+    left : 149px;
+    bottom:149px;
+    opacity: 50%;
+    /* we want to rotate secondhand by its origin sothat only y axis rote from origin */
+    transform-origin:0% 100% ;
+}
+#minute-hand{
+    position: absolute;
+    /* samll stick than second  of 2px width */
+    height: 100px;
+    width: 2px;
+    background-color: rgb(253,120,227);
+    /* move to center of clock = means half of circle distance= 300/2=150px -1px border (both side lrft and bottom) = 149px */
+    left : 149px;
+    bottom:149px;
+    opacity: 50%;
+    /* we want to rotate minutehand by its origin sothat only y axis rote from origin */
+    transform-origin:0% 100% ;
+}
+#hour-hand{
+    position: absolute;
+    /* samll stick than hour of 2px width */
+    height: 80px;
+    width: 4px;
+    background-color: rgb(205,112,255);
+    /* move to center of clock (149 from right and 149px from bottom to makesure it is perpectly center)
+     = means half of circle distance= 300/2=150px -2px border (both side2px left and 2pxbottom total=4px) = 148px */
+    left : 148px;
+    bottom:148px;
+    opacity: 50%;
+    /* we want to rotate hourhand by its origin sothat only y axis rote from origin */
+    transform-origin:0% 100% ;
+}
+#center-dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(252, 255 ,55);
+    position: absolute;
+    /* move to center of clock 
+     = means half of circle distance= 300/2=150px -5px border (both side left and bottom total=4px) = 145px */
+     left:145px;
+     bottom: 145px;
+}
